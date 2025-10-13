@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Get all books</title>
+</head>
+<body>
+    <h2>BOOK STORE</h2>
+    <a href="http://localhost:3000/books/new">Create a new book</a>
+    <% for(book of books){ %>
+        <div style="border:1px solid black;width:250px">
+        <h3 style="color: rgb(0, 161, 224);">title:<%= book.title %></h3>
+        <p>author:<%= book.author %></p>
+        <p>price:<%= book.price %></p>
+        <p></p>
+    <% } %>
+    </div>
+    
+</body>
+</html>

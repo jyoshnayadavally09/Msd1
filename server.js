@@ -1,19 +1,45 @@
-const express = require('express');
-const app = express();
+let express = require("express")
+let app = express();
+app.set("view engine","ejs");
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
-// Set EJS as view engine
-app.set('view engine', 'ejs');
+app.listen("3000",()=>{
+    console.log("server is started");
+    
+})
+app.get('/',(req,res)=>{
+    res.send("working");
+})
+let books=[{
+    title : "lion the king",
+    author:"me",
+    price:7000,
+    id:1
+},
+{
+    title : "Engineering",
+    author:"king",
+    price:9000,
+    id:2
+}
+]
+app.get('/books',(req,res)=>{
+    res.render("books",{books})
+})
+app.get('/books/new',(req,res)=>{
+    res.render("new.ejs");
+})
+app.post('/books',(req,res)=>{
+    console.log(req.body);
+    
+    let {title,author,price} = req.body;
+    books.push({
+        title,
+        author,
+        price,
+        id:books.length+1
+    })
 
-// Home route
-app.get('/', (req, res) => {
-  res.send("nnnnn");
-});
-
-// Chats route
-app.get('/chats', (req, res) => {
-  const name = ["jyoshna", "bhavani"];
-  res.render("chats", { name });
-});
-
-// ✅ Export app instead of listen (Vercel handles this)
-module.exports = app;
+    res.redirect('/books')
+})
