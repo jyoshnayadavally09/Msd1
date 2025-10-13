@@ -3,15 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "<<<<<<< HEAD\r # Msd1\r =======\r # MSD-EXAM-13-10-2025\r >>>>>>> 022f4c073171e5213928b637df1265410b8eac6e",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyoshnayadavally09/Msd1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jyoshnayadavally09/Msd1/issues"
+  },
+  "homepage": "https://github.com/jyoshnayadavally09/Msd1#readme"
 }
