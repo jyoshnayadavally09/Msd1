@@ -1,0 +1,19 @@
+{
+  "books": [
+    {
+      "title": "lion the king",
+      "author": "jyoshna",
+      "price": 1234
+    },
+    {
+      "title": "harry poter",
+      "author": "king",
+      "price": 1222
+    },
+    {
+      "title": " poter",
+      "author": "king",
+      "price": 1222
+    }
+  ]
+}
